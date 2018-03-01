@@ -54,7 +54,8 @@ const double OOBILLION = 1.0 / 1e9;
 extern struct timespec timeStart, timeCurrent;
 extern double timeDiff(struct timespec *start, struct timespec *end);
 extern void timeCopy(struct timespec *dest, struct timespec *source);
-void showNameCesarA();
+extern void showNameCesarA();
+extern void drawBox(int, int);
 //-----------------------------------------------------------------------------
 
 class Global {
@@ -742,6 +743,7 @@ void render()
 	Rect r;
 	glClear(GL_COLOR_BUFFER_BIT);
 	showNameCesarA();
+	drawBox(gl.xres/2, gl.yres/2);
 
 	r.bot = gl.yres - 20;
 	r.left = 10;
